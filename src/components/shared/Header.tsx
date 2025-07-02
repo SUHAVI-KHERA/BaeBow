@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Menu, ShoppingBag } from "lucide-react";
+import { Menu, ShoppingBag, Heart } from "lucide-react";
 import { useCart } from "@/context/CartProvider";
 import { useEffect, useState } from "react";
 
 const navLinks = [
+  { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
   { href: "/style-guide", label: "Style Guide" },
   { href: "/style-stories", label: "Style Stories" },
@@ -37,7 +38,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="/wishlist">
+                <Heart className="h-5 w-5" />
+                <span className="sr-only">Wishlist</span>
+            </Link>
+          </Button>
           <Button variant="ghost" size="icon" asChild className="relative">
             <Link href="/cart">
               <ShoppingBag className="h-5 w-5" />
