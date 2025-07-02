@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Menu, ShoppingBag, Heart } from "lucide-react";
 import { useCart } from "@/context/CartProvider";
+import { useWishlist } from "@/context/WishlistProvider";
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -19,6 +20,7 @@ const navLinks = [
 
 export function Header() {
   const { cartCount } = useCart();
+  const { wishlistCount } = useWishlist();
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -39,9 +41,12 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="ghost" size="icon" asChild className="relative">
             <Link href="/wishlist">
                 <Heart className="h-5 w-5" />
+                 {isClient && wishlistCount > 0 && (
+                  <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
+                )}
                 <span className="sr-only">Wishlist</span>
             </Link>
           </Button>
