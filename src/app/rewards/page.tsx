@@ -8,7 +8,7 @@ export default function RewardsPage() {
     <div className="bg-accent/20">
       <div className="container mx-auto px-4 py-12 md:px-6 lg:py-24">
         <div className="mb-12 text-center">
-          <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">Circular Fashion Rewards</h1>
+          <h1 className="font-headline text-4xl font-normal tracking-tight sm:text-5xl">Circular Fashion Rewards</h1>
           <p className="mt-3 max-w-3xl mx-auto text-muted-foreground md:text-lg">
             Join us in building a more sustainable future for fashion. Your pre-loved BaeBow pieces have value beyond their first life.
           </p>

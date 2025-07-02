@@ -10,7 +10,7 @@ export default function CapsuleCollectionPage() {
     <div className="bg-muted/30">
         <div className="container mx-auto px-4 py-12 md:px-6 md:py-24">
             <div className="mb-12 text-center">
-                <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">The Capsule Collection</h1>
+                <h1 className="font-headline text-4xl font-normal tracking-tight sm:text-5xl">The Capsule Collection</h1>
                 <p className="mt-3 max-w-3xl mx-auto text-muted-foreground md:text-lg">
                 The art of a minimalist wardrobe. We believe in "fewer, better things". A capsule collection is a curated set of essential, versatile items that can be mixed and matched to create numerous outfits.
                 </p>
@@ -18,7 +18,7 @@ export default function CapsuleCollectionPage() {
 
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
-                    <h2 className="font-headline text-3xl font-bold">6 Items <ArrowRight className="inline-block h-8 w-8 text-primary" /> 15+ Looks</h2>
+                    <h2 className="font-headline text-3xl font-normal">6 Items <ArrowRight className="inline-block h-8 w-8 text-primary" /> 15+ Looks</h2>
                     <p className="text-muted-foreground">
                         Our featured capsule includes six foundational pieces that are designed to work seamlessly together. From a critical board meeting to a casual brunch, these items provide a complete, stylish wardrobe for the modern professional. Simplify your life, reduce decision fatigue, and always look impeccable.
                     </p>

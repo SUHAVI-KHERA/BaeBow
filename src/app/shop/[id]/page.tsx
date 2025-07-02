@@ -39,7 +39,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           </Carousel>
         </div>
         <div className="space-y-6">
-          <h1 className="font-headline text-4xl font-bold">{product.name}</h1>
+          <h1 className="font-headline text-4xl font-normal">{product.name}</h1>
           <p className="text-3xl font-semibold text-primary">₹{product.price.toLocaleString('en-IN')}</p>
           <div className="flex flex-wrap gap-2">
             {product.styleTags.map(tag => (

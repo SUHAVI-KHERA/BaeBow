@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import Image from "next/image";
+import Link from "next/link";
 
 const checkoutSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -39,7 +40,7 @@ export default function CheckoutPage() {
   if (cartItems.length === 0) {
      return (
         <div className="container mx-auto flex min-h-[60vh] flex-col items-center justify-center text-center">
-            <h1 className="mt-8 font-headline text-4xl font-bold">Your Cart is Empty</h1>
+            <h1 className="mt-8 font-headline text-4xl font-normal">Your Cart is Empty</h1>
             <p className="mt-4 text-lg text-muted-foreground">You can't checkout without any items.</p>
             <Button asChild className="mt-8" size="lg">
                 <Link href="/shop">Start Shopping</Link>
@@ -50,7 +51,7 @@ export default function CheckoutPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 md:px-6">
-      <h1 className="mb-8 text-center font-headline text-4xl font-bold">Checkout</h1>
+      <h1 className="mb-8 text-center font-headline text-4xl font-normal">Checkout</h1>
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-5">
         <div className="lg:col-span-3">
           <Card>
