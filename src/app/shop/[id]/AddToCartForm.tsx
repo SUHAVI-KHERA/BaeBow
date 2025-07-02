@@ -7,7 +7,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import type { Product } from "@/lib/types";
-import { ShoppingBag } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export function AddToCartForm({ product }: { product: Product }) {
   const [selectedSize, setSelectedSize] = useState<string | null>(product.sizes[0] || null);
@@ -33,8 +33,8 @@ export function AddToCartForm({ product }: { product: Product }) {
     });
 
     toast({
-      title: "Added to Cart!",
-      description: `${product.name} (${selectedSize}) has been added to your cart.`,
+      title: "Added to Bag!",
+      description: `${product.name} (${selectedSize}) has been added to your bag.`,
     });
   };
 
@@ -61,8 +61,8 @@ export function AddToCartForm({ product }: { product: Product }) {
         </RadioGroup>
       </div>
       <Button size="lg" className="w-full" onClick={handleAddToCart}>
-        <ShoppingBag className="mr-2 h-5 w-5" />
-        Add to Cart
+        <Plus className="mr-2 h-5 w-5" />
+        Add to Bag
       </Button>
     </div>
   );

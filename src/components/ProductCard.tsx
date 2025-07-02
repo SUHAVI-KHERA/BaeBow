@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@/lib/types";
-import { Heart, ShoppingBag, Star } from "lucide-react";
+import { Heart, Plus, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 interface ProductCardProps {
@@ -49,8 +49,8 @@ export function ProductCard({ product }: ProductCardProps) {
                 ))}
             </div>
           </div>
-          <Button size="icon" className="h-10 w-10 flex-shrink-0 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90">
-            <ShoppingBag className="h-5 w-5" />
+          <Button size="icon" className="h-10 w-10 flex-shrink-0 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-primary/90" aria-label="Add to Bag">
+            <Plus className="h-5 w-5" />
             <span className="sr-only">Add to Bag</span>
           </Button>
         </div>
