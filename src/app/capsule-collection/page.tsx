@@ -1,9 +1,10 @@
 import { ProductCard } from "@/components/ProductCard";
 import { products } from "@/lib/data";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function CapsuleCollectionPage() {
-  const capsuleItems = products.slice(0, 5);
+  const capsuleItems = products.slice(0, 6);
   
   return (
     <div className="bg-muted/30">
@@ -17,31 +18,32 @@ export default function CapsuleCollectionPage() {
 
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
                 <div className="space-y-6">
-                    <h2 className="font-headline text-3xl font-bold">5 Items <ArrowRight className="inline-block h-8 w-8 text-primary" /> 12+ Looks</h2>
+                    <h2 className="font-headline text-3xl font-bold">6 Items <ArrowRight className="inline-block h-8 w-8 text-primary" /> 15+ Looks</h2>
                     <p className="text-muted-foreground">
-                        Our featured capsule includes five foundational pieces that are designed to work seamlessly together. From a critical board meeting to a casual brunch, these items provide a complete, stylish wardrobe for the modern professional. Simplify your life, reduce decision fatigue, and always look impeccable.
+                        Our featured capsule includes six foundational pieces that are designed to work seamlessly together. From a critical board meeting to a casual brunch, these items provide a complete, stylish wardrobe for the modern professional. Simplify your life, reduce decision fatigue, and always look impeccable.
                     </p>
                     <ul className="space-y-2 text-muted-foreground">
+                        <li><span className="font-semibold text-foreground">The Executive Sheath Dress:</span> A powerful one-and-done solution.</li>
                         <li><span className="font-semibold text-foreground">The Unstoppable Trousers:</span> The perfect base for any look.</li>
                         <li><span className="font-semibold text-foreground">The Poise Silk Blouse:</span> Adds a touch of elegance.</li>
                         <li><span className="font-semibold text-foreground">The Visionary Blazer:</span> For instant sophistication.</li>
-                        <li><span className="font-semibold text-foreground">The Convertible Skirt:</span> From formal to casual.</li>
-                        <li><span className="font-semibold text-foreground">The Essential Knit Top:</span> The ultimate layering piece.</li>
+                        <li><span className="font-semibold text-foreground">The Convertible A-Line Skirt:</span> From formal to casual.</li>
+                        <li><span className="font-semibold text-foreground">The Everyday Essential Knit Top:</span> The ultimate layering piece.</li>
                     </ul>
                 </div>
                 <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                    {capsuleItems.slice(0, 3).map(item => (
+                    {capsuleItems.map(item => (
                          <div key={item.id} className="rounded-lg overflow-hidden shadow-md">
-                             <img src={item.images[0]} alt={item.name} className="w-full h-auto object-cover aspect-[3/4]" data-ai-hint="fashion item"/>
+                             <Image 
+                                src={item.images[0]} 
+                                alt={item.name} 
+                                width={400}
+                                height={533}
+                                className="w-full h-auto object-cover aspect-[3/4]" 
+                                data-ai-hint="fashion item"
+                              />
                          </div>
                     ))}
-                    <div className="col-span-2 md:col-span-3 grid grid-cols-2 gap-4">
-                         {capsuleItems.slice(3, 5).map(item => (
-                             <div key={item.id} className="rounded-lg overflow-hidden shadow-md">
-                                 <img src={item.images[0]} alt={item.name} className="w-full h-auto object-cover aspect-[3/4]" data-ai-hint="fashion item"/>
-                             </div>
-                        ))}
-                    </div>
                 </div>
             </div>
         </div>

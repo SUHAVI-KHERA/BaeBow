@@ -28,7 +28,7 @@ export default function Home() {
             </Button>
           </div>
           <Image
-            src="https://placehold.co/600x600.png"
+            src="https://images.pexels.com/photos/291762/pexels-photo-291762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             data-ai-hint="woman office wear"
             alt="Confident woman in BaeBow officewear"
             width={600}
@@ -97,7 +97,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto grid items-center gap-10 px-4 md:grid-cols-2 md:px-6">
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://images.pexels.com/photos/7148633/pexels-photo-7148633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             data-ai-hint="phone scanning qrcode"
             alt="Phone scanning a QR code on a clothing tag"
             width={600}
