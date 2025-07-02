@@ -20,7 +20,7 @@ export function Footer() {
       <div className="container mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-12 md:grid-cols-4 md:px-6">
         <div className="flex flex-col gap-4">
           <Link href="/" className="flex items-center">
-            <span className="font-headline text-2xl font-bold">BaeBow</span>
+            <span className="font-headline text-2xl font-bold text-accent">BaeBow</span>
           </Link>
           <p className="text-sm text-muted-foreground">Confidence in Every Curve.</p>
           <div className="flex space-x-4">
