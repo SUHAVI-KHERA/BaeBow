@@ -15,7 +15,7 @@ export default function Home() {
       <section className="w-full bg-accent/30">
         <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 py-20 md:grid-cols-2 md:px-6 lg:gap-12">
           <div className="space-y-6 text-center md:text-left">
-            <h1 className="font-headline text-4xl font-normal tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Confidence in Every Curve
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -42,7 +42,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="font-headline text-3xl font-normal tracking-tight sm:text-4xl">Featured Collection</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Featured Collection</h2>
             <p className="mt-2 text-muted-foreground">Discover our handpicked selection of must-have styles.</p>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -62,7 +62,7 @@ export default function Home() {
       <section className="w-full bg-muted/50 py-12 md:py-24 lg:py-32">
         <div className="container mx-auto grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
-            <h2 className="font-headline text-3xl font-normal tracking-tight md:text-4xl/tight">Real Problems, Real Solutions</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight md:text-4xl/tight">Real Problems, Real Solutions</h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We design clothes that solve real-world wardrobe challenges for Indian women.
             </p>
@@ -106,7 +106,7 @@ export default function Home() {
           />
           <div className="space-y-4">
             <div className="inline-block rounded-lg bg-accent px-3 py-1 text-sm text-accent-foreground">Beyond the Hanger</div>
-            <h2 className="font-headline text-3xl font-normal tracking-tight sm:text-4xl">Unlock Your Style Potential</h2>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">Unlock Your Style Potential</h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
               Every BaeBow piece comes with a unique QR tag. Scan it to access exclusive 15-second video guides, showing you how to style your new outfit for any occasion.
             </p>

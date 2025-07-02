@@ -17,7 +17,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div className="flex justify-center flex-wrap gap-2 mb-4">
             {post.tags.map(tag => <Badge key={tag} variant="default">{tag}</Badge>)}
           </div>
-          <h1 className="font-headline text-4xl font-normal tracking-tight md:text-5xl lg:text-6xl">{post.title}</h1>
+          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">{post.title}</h1>
           <p className="mt-4 text-muted-foreground">Published on {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
       </header>

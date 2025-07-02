@@ -9,7 +9,7 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:px-6">
       <div className="mb-12 text-center">
-        <h1 className="font-headline text-4xl font-normal tracking-tight sm:text-5xl">BaeBow Blog</h1>
+        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">BaeBow Blog</h1>
         <p className="mt-3 max-w-2xl mx-auto text-muted-foreground md:text-lg">
           Your source for styling tips, fashion insights, and stories of confidence.
         </p>

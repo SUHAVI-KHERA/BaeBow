@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto max-w-5xl px-4 py-12 md:px-6">
       <div className="mb-12 text-center">
-        <h1 className="font-headline text-4xl font-normal tracking-tight sm:text-5xl">Get in Touch</h1>
+        <h1 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl">Get in Touch</h1>
         <p className="mt-3 max-w-2xl mx-auto text-muted-foreground md:text-lg">
           We'd love to hear from you. Whether you have a question about our products, styling, or anything else, our team is ready to answer all your questions.
         </p>

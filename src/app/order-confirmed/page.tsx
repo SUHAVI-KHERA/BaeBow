@@ -9,7 +9,7 @@ export default function OrderConfirmedPage() {
       <Card className="w-full max-w-lg text-center">
         <CardContent className="p-10">
           <CheckCircle2 className="mx-auto h-20 w-20 text-green-500" />
-          <h1 className="mt-6 font-headline text-4xl font-normal">Thank You!</h1>
+          <h1 className="mt-6 font-headline text-4xl font-bold">Thank You!</h1>
           <p className="mt-3 text-lg text-muted-foreground">
             Your order has been placed successfully.
           </p>
