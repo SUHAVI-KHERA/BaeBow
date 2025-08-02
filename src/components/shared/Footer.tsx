@@ -10,9 +10,9 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { title: "Company", links: [{ name: "About Us", href: "#" }, { name: "Blog", href: "/blog" }, { name: "Testimonials", href: "/testimonials" }] },
-  { title: "Support", links: [{ name: "Contact Us", href: "/contact" }, { name: "FAQs", href: "#" }, { name: "Shipping & Returns", href: "#" }] },
-  { title: "Legal", links: [{ name: "Privacy Policy", href: "#" }, { name: "Terms of Service", href: "#" }] },
+  { title: "Company", links: [{ name: "About Us", href: "/about" }, { name: "Blog", href: "/blog" }, { name: "Testimonials", href: "/testimonials" }] },
+  { title: "Support", links: [{ name: "Contact Us", href: "/contact" }, { name: "FAQs", href: "/faq" }, { name: "Shipping & Returns", href: "/shipping" }] },
+  { title: "Legal", links: [{ name: "Privacy Policy", href: "/privacy" }, { name: "Terms of Service", href: "/terms" }] },
 ];
 
 export function Footer() {
