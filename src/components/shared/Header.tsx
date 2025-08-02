@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -29,22 +30,12 @@ function HeaderIcons() {
         setIsClient(true);
     }, []);
 
-    if (!isClient) {
-        return (
-            <>
-                <div className="h-10 w-10"></div>
-                <div className="h-10 w-10"></div>
-                <div className="h-10 w-10 md:hidden"></div>
-            </>
-        );
-    }
-    
     return (
         <>
             <Button variant="ghost" size="icon" asChild className="relative">
                 <Link href="/wishlist">
                     <Heart className="h-5 w-5" />
-                    {wishlistCount > 0 && (
+                    {isClient && wishlistCount > 0 && (
                         <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
                     )}
                     <span className="sr-only">Wishlist</span>
@@ -53,7 +44,7 @@ function HeaderIcons() {
             <Button variant="ghost" size="icon" asChild className="relative">
                 <Link href="/cart">
                     <ShoppingBag className="h-5 w-5" />
-                    {cartCount > 0 && (
+                    {isClient && cartCount > 0 && (
                         <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
                     )}
                     <span className="sr-only">Shopping Cart</span>
