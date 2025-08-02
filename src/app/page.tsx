@@ -99,8 +99,8 @@ export default function Home() {
             src="https://images.pexels.com/photos/7148633/pexels-photo-7148633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             data-ai-hint="phone scanning qrcode"
             alt="Phone scanning a QR code on a clothing tag"
-            width={450}
-            height={300}
+            width={400}
+            height={400}
             className="mx-auto overflow-hidden rounded-xl object-cover"
           />
           <div className="space-y-4 fade-in-up">
