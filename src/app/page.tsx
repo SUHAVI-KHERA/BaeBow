@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { products } from "@/lib/data";
-import { ArrowRight, QrCode, ShieldCheck, Video } from "lucide-react";
+import { ArrowRight, QrCode, ShieldCheck, Video, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ProductCard } from "@/components/ProductCard";
@@ -77,7 +77,7 @@ export default function Home() {
             </Card>
             <Card className="text-left">
               <CardContent className="p-6">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mb-4 h-10 w-10 text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m10.5 9.5 3 3 3-3"/><path d="m10.5 14.5 3-3 3 3"/></svg>
+                <Sparkles className="mb-4 h-10 w-10 text-primary" />
                 <h3 className="mb-2 font-headline text-xl font-bold">Adaptive Fit</h3>
                 <p className="text-muted-foreground">Our designs incorporate smart stretching and adjustable features for a perfect fit that moves with you.</p>
               </CardContent>
