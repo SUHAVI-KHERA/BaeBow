@@ -35,7 +35,7 @@ export function Logo({
       </svg>
       <span
         className={cn(
-          "font-headline font-bold text-primary",
+          "font-thin tracking-widest uppercase",
           textClassName
         )}
       >
