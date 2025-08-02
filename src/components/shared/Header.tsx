@@ -10,6 +10,7 @@ import { useWishlist } from "@/context/WishlistProvider";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { cn } from "@/lib/utils";
+import ClientOnly from "@/components/ClientOnly";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -24,39 +25,28 @@ const navLinks = [
 function HeaderIcons() {
     const { cartCount } = useCart();
     const { wishlistCount } = useWishlist();
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    if (!isClient) {
-        return (
-            <>
-                <div className="h-10 w-10"></div>
-                <div className="h-10 w-10"></div>
-                <div className="h-10 w-10 md:hidden"></div>
-            </>
-        )
-    }
 
     return (
         <>
             <Button variant="ghost" size="icon" asChild className="relative">
                 <Link href="/wishlist">
                     <Heart className="h-5 w-5" />
-                    {wishlistCount > 0 && (
-                        <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
-                    )}
+                    <ClientOnly>
+                        {wishlistCount > 0 && (
+                            <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
+                        )}
+                    </ClientOnly>
                     <span className="sr-only">Wishlist</span>
                 </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild className="relative">
                 <Link href="/cart">
                     <ShoppingBag className="h-5 w-5" />
-                    {cartCount > 0 && (
-                        <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
-                    )}
+                     <ClientOnly>
+                        {cartCount > 0 && (
+                            <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
+                        )}
+                    </ClientOnly>
                     <span className="sr-only">Shopping Cart</span>
                 </Link>
             </Button>
