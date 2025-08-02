@@ -59,19 +59,6 @@
   }
 }
 
-/* Custom button animation */
-.draw-arrow {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 2s ease-in-out forwards;
-}
-
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 .fade-in {
   animation: fadeIn 1s ease-in-out forwards;
 }

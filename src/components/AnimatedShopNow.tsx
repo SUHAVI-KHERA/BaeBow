@@ -1,13 +1,15 @@
 "use client"
+import { Button } from "@/components/ui/button";
 import Link from 'next/link';
+import { ArrowRight } from "lucide-react";
 
 export function AnimatedShopNow() {
   return (
-    <Link href="/shop" className="group inline-block text-lg font-light tracking-wider text-white">
-      Shop Now
-      <svg className="mt-1" width="80" height="10" viewBox="0 0 100 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 5 H 100" stroke="white" strokeWidth="1" className="draw-arrow" />
-      </svg>
-    </Link>
+    <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white hover:text-black transition-all duration-300 group">
+      <Link href="/shop">
+        Shop Now
+        <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+      </Link>
+    </Button>
   );
 }
