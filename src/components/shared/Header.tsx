@@ -20,15 +20,83 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function HeaderIcons() {
+    const { cartCount } = useCart();
+    const { wishlistCount } = useWishlist();
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    if (!isClient) {
+        return (
+            <>
+                <div className="h-10 w-10"></div>
+                <div className="h-10 w-10"></div>
+                <div className="h-10 w-10 md:hidden"></div>
+            </>
+        );
+    }
+    
+    return (
+        <>
+            <Button variant="ghost" size="icon" asChild className="relative">
+                <Link href="/wishlist">
+                    <Heart className="h-5 w-5" />
+                    {wishlistCount > 0 && (
+                        <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
+                    )}
+                    <span className="sr-only">Wishlist</span>
+                </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild className="relative">
+                <Link href="/cart">
+                    <ShoppingBag className="h-5 w-5" />
+                    {cartCount > 0 && (
+                        <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
+                    )}
+                    <span className="sr-only">Shopping Cart</span>
+                </Link>
+            </Button>
+            <Sheet>
+                <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon" className="md:hidden">
+                        <Menu className="h-6 w-6" />
+                        <span className="sr-only">Toggle navigation menu</span>
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="bg-background">
+                    <div className="flex items-center justify-between">
+                        <Link href="/" className="flex items-center">
+                            <Logo textClassName="text-3xl" />
+                        </Link>
+                        <SheetClose asChild>
+                            <Button variant="ghost" size="icon" className="md:hidden">
+                                <span className="sr-only">Close</span>
+                            </Button>
+                        </SheetClose>
+                    </div>
+                    <div className="mt-6 grid gap-4">
+                        {navLinks.map((link) => (
+                            <SheetClose asChild key={link.href}>
+                                <Link href={link.href} className="text-lg font-medium transition-colors hover:text-primary/80">
+                                    {link.label}
+                                </Link>
+                            </SheetClose>
+                        ))}
+                    </div>
+                </SheetContent>
+            </Sheet>
+        </>
+    )
+}
+
+
 export function Header() {
-  const { cartCount } = useCart();
-  const { wishlistCount } = useWishlist();
-  const [isClient, setIsClient] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
-
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
     };
@@ -53,53 +121,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" asChild className="relative">
-            <Link href="/wishlist">
-                <Heart className="h-5 w-5" />
-                 {isClient && wishlistCount > 0 && (
-                  <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
-                )}
-                <span className="sr-only">Wishlist</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="relative">
-            <Link href="/cart">
-              <ShoppingBag className="h-5 w-5" />
-              {isClient && cartCount > 0 && (
-                <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-primary ring-2 ring-background"></span>
-              )}
-              <span className="sr-only">Shopping Cart</span>
-            </Link>
-          </Button>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="bg-background">
-               <div className="flex items-center justify-between">
-                 <Link href="/" className="flex items-center">
-                   <Logo textClassName="text-3xl" />
-                 </Link>
-                 <SheetClose asChild>
-                   <Button variant="ghost" size="icon" className="md:hidden">
-                      <span className="sr-only">Close</span>
-                   </Button>
-                 </SheetClose>
-               </div>
-              <div className="mt-6 grid gap-4">
-                {navLinks.map((link) => (
-                  <SheetClose asChild key={link.href}>
-                    <Link href={link.href} className="text-lg font-medium transition-colors hover:text-primary/80">
-                      {link.label}
-                    </Link>
-                  </SheetClose>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+          <HeaderIcons />
         </div>
       </div>
     </header>
