@@ -67,21 +67,21 @@ export default function Home() {
             </p>
           </div>
           <div className="mx-auto mt-8 grid w-full max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-            <Card className="text-left bg-transparent border-muted-foreground/20">
+            <Card className="text-left bg-transparent border-muted-foreground/20 transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2">
               <CardContent className="p-6">
                 <ShieldCheck className="mb-4 h-10 w-10 text-primary" />
                 <h3 className="mb-2 text-xl font-semibold">Anti-Sweat Tech</h3>
                 <p className="text-muted-foreground">Stay cool and confident with our breathable, moisture-wicking fabrics, perfect for the Indian climate.</p>
               </CardContent>
             </Card>
-            <Card className="text-left bg-transparent border-muted-foreground/20">
+            <Card className="text-left bg-transparent border-muted-foreground/20 transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2">
               <CardContent className="p-6">
                 <Sparkles className="mb-4 h-10 w-10 text-primary" />
                 <h3 className="mb-2 text-xl font-semibold">Adaptive Fit</h3>
                 <p className="text-muted-foreground">Our designs incorporate smart stretching and adjustable features for a perfect fit that moves with you.</p>
               </CardContent>
             </Card>
-            <Card className="text-left bg-transparent border-muted-foreground/20">
+            <Card className="text-left bg-transparent border-muted-foreground/20 transition-all duration-300 hover:shadow-primary/20 hover:shadow-lg hover:-translate-y-2">
               <CardContent className="p-6">
                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mb-4 h-10 w-10 text-primary"><path d="M12 2c-3 0-5 2-5 5v2H5.5C4.67 9 4 9.67 4 10.5V20c0 .83.67 1.5 1.5 1.5h13c.83 0 1.5-.67 1.5-1.5V10.5c0-.83-.67-1.5-1.5-1.5H17V7c0-3-2-5-5-5z"/><path d="M9 14.12V15a3 3 0 0 0 6 0v-.88"/></svg>
                 <h3 className="mb-2 text-xl font-semibold">Tummy Control</h3>
@@ -99,11 +99,11 @@ export default function Home() {
             src="https://images.pexels.com/photos/7148633/pexels-photo-7148633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             data-ai-hint="phone scanning qrcode"
             alt="Phone scanning a QR code on a clothing tag"
-            width={600}
-            height={400}
+            width={500}
+            height={350}
             className="mx-auto overflow-hidden rounded-xl object-cover"
           />
-          <div className="space-y-4">
+          <div className="space-y-4 fade-in-up">
             <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm text-secondary-foreground">Beyond the Hanger</div>
             <h2 className="text-3xl font-light tracking-tight sm:text-4xl">Unlock Your Style Potential</h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
